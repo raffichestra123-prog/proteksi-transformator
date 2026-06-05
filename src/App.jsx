@@ -9,7 +9,9 @@ import useClickSound from "./hooks/useClickSound";
 function App() {
 
   const [loading, setLoading] = useState(true);
-  !sessionStorage.getItem("appLaded")
+  !sessionStorage.getItem("appLoaded",
+                          "true"
+  );
 
   useClickSound();
 useEffect(() => {

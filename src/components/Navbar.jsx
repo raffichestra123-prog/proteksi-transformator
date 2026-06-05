@@ -5,43 +5,43 @@ import { Menu, X } from "lucide-react";
 import LightningTransition from "./LightningTransition";
 
 export default function Navbar() {
-const [mobileMenu, setMobileMenu] = useState(false);
-const [showAuthor, setShowAuthor] = useState(false);
-const [showLightning, setShowLightning] = useState(false);
 
-const navigate = useNavigate();
+  const [mobileMenu, setMobileMenu] = useState(false);
 
-const [musicOn, setMusicOn] = useState(
-localStorage.getItem("musicEnabled") !== "false"
-);
+  const [showAuthor, setShowAuthor] = useState(false);
 
-const toggleMusic = () => {
-const newValue = !musicOn;
+  const [showLightning, setShowLightning] = useState(false);
 
-```
-setMusicOn(newValue);
+  const navigate = useNavigate();
 
-localStorage.setItem(
-  "musicEnabled",
-  newValue
-);
+  const [musicOn, setMusicOn] = useState(
+    localStorage.getItem("musicEnabled") !== "false"
+  );
 
-window.dispatchEvent(
-  new Event("musicChanged")
-);
-```
+  const toggleMusic = () => {
 
-};
+    const newValue = !musicOn;
+
+    setMusicOn(newValue);
+
+    localStorage.setItem(
+      "musicEnabled",
+      newValue
+    );
+
+    window.dispatchEvent(
+      new Event("musicChanged")
+    );
+
+  };
 
 const handleNavigate = (path) => {
 setShowLightning(true);
 
-```
 setTimeout(() => {
   navigate(path);
   setShowLightning(false);
 }, 500);
-```
 
 };
 
@@ -50,12 +50,14 @@ setMobileMenu(false);
 handleNavigate(path);
 };
 
+console.log("navigate =", navigate);
+console.log("typeof navigate =", typeof navigate);
+
 return (
 <>
 {showLightning && ( <LightningTransition />
 )}
 
-```
   <nav
     className="
       fixed top-0 left-0
