@@ -10,7 +10,7 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section className="max-w-7xl mx-auto px-8 pt-40 pb-24">
+      <section className="max-w-7xl mx-auto px-4 md:px-8 pt-52 md:pt-40 pb-24">
 
         <div className="grid lg:grid-cols-2 gap-24 items-center">
 
@@ -22,7 +22,15 @@ export default function Home() {
               ⚡ Sistem Proteksi Gardu Induk
             </div>
 
-            <h1 className="text-[72px] leading-[0.95] font-black mt-10">
+           <h1
+  className="
+    text-5xl
+    md:text-[72px]
+    leading-[0.95]
+    font-black
+    mt-10
+  "
+>
 
               Proteksi
 
