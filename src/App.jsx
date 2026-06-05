@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import AppRoutes from "./routes/AppRoutes";
+import AppRoutes from "./Routes/AppRoutes";
 import BackgroundMusic from "./components/BackgroundMusic";
 import LoadingScreen from "./components/LoadingScreen";
 import useClickSound from "./hooks/useClickSound";
