@@ -1,4 +1,4 @@
-import transformerImg from "../assets/tranformator.png";
+import transformerImg from "../assets/Tranformator.png";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
